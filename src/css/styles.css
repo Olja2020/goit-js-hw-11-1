@@ -23,43 +23,121 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-.timer {
-  display: flex;
-  gap: 10px;
-}
-span {
-  display: block;
-}
-.value {
-  font-size: 30px;
-  font-weight: 300;
 
-  margin-top: 15px;
-}
-.label {
-  text-transform: uppercase;
+body {
+  background-color: white;
+  font-family: Montserrat;
   font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin: 0 auto;
+
+  padding-left: 15px;
+
+  padding-right: 15px;
 }
-.field {
+
+ul {
+  list-style-type: none;
+
+  padding: 0;
+
+  margin: 0;
+}
+
+.gallery {
+  display: flex;
+
+  gap: 26px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  list-style-type: none;
+
+  width: calc((100% - 52px) / 3);
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+  width: 360px;
+
+  border: 1px solid #808080;
 }
-button[type='submit'] {
-  width: 203px;
-}
-fieldset {
-  width: 175px;
-}
-.delay {
-  width: 195px;
+
+.gallery-image {
+  display: none;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+
   display: block;
 }
 form {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  gap: 10px;
+  align-items: center;
 }
+
+input {
+  width: 360px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+
+  font: inherit;
+  letter-spacing: inherit;
+}
+
 button {
-  margin-top: 5px;
+  display: flex;
+  font: inherit;
+  letter-spacing: inherit;
+  font-weight: 500;
+  width: 95px;
+  height: 40px;
+  padding: 8px 16px 8px 16px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  background: #4e75ff;
+  justify-content: center;
+}
+span {
+  display: block;
+  font-weight: 400;
+}
+
+.list {
+  display: flex;
+  justify-content: space-around;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
